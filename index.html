@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nardine - Project Manager & Event Specialist Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">ناردين | Nardine</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">عنّي</a></li>
+                    <li><a href="#experience">الخبرة العملية</a></li>
+                    <li><a href="#services">الخدمات والمهارات</a></li>
+                    <li><a href="#contact">تواصل معي</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>أهلاً بك، أنا ناردين 👋</h1>
+            <h2>مديرة مشاريع ومتخصصة في تنظيم وإدارة الفعاليات (Event Management)</h2>
+            <p>أعمل كـ Project Manager في شركة Intervento في مصر. أمتلك خبرة واسعة في تخطيط وتنفيذ الفعاليات والمؤتمرات الكبرى، إدارة فرق العمل، وضمان خروج المؤتمرات بأعلى معايير الاحترافية.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn primary-btn">تواصل معي</a>
+                <a href="assets/docs/Nardine_CV.pdf" class="btn secondary-btn" download>تحميل السيرة الذاتية</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">عنّي</h2>
+            <p style="max-width: 750px; margin: auto;">شغوفة بـ إدارة المشاريع وتنظيم الفعاليات، أعمل على تحويل الأفكار إلى تجارب واقعية ومؤتمرات ناجحة. أركز دائماً على أدق التفاصيل من التخطيط الأولي، إدارة الميزانيات، التنسيق مع الموردين والمتحدثين، وحتى التقييم النهائي للفاعلية.</p>
+        </div>
+    </section>
+
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">الخبرة العملية</h2>
+            <div class="card">
+                <h3>Project Manager</h3>
+                <p class="company">Intervento - مصر</p>
+                <ul>
+                    <li>إدارة وتنسيق كافة مراحل الفعاليات والمؤتمرات من البداية للنهاية.</li>
+                    <li>التنسيق مع العملاء والشركاء لضمان تحقيق أهداف الفعالية.</li>
+                    <li>إدارة فرق العمل الميدانية واللوجستيات لضمان سير الفعالية بسلاسة.</li>
+                    <li>التعامل مع الفعاليات الكبرى الموجهة لمتخصصي التكنولوجيا، الذكاء الاصطناعي، وقادة الأعمال.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">الخدمات والمهارات</h2>
+            <div class="grid">
+                <div class="grid-card">
+                    <h3>إدارة الفعاليات والمؤتمرات</h3>
+                    <p>تخطيط وإدارة جميع الجوانب اللوجستية والتنظيمية للفعاليات بمختلف الأحجام.</p>
+                </div>
+                <div class="grid-card">
+                    <h3>إدارة المشاريع (Project Management)</h3>
+                    <p>متابعة جداول العمل، توزيع المهام، إدارة المخاطر، وضمان التسليم في المواعيد المحددة.</p>
+                </div>
+                <div class="grid-card">
+                    <h3>التنسيق والتواصل</h3>
+                    <p>بناء علاقات ممتازة مع المتحدثين، الرعاة، الموردين، والفرق الفنية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">تواصل معي</h2>
+            <p>هل لديك مشروع أو فعالية قادمة؟ يسعدني التواصل معك ومناقشة تفاصيل العمل.</p>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح!');">
+                <input type="text" placeholder="الاسم الكامل" required>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <textarea rows="4" placeholder="رسالتك..." required></textarea>
+                <button type="submit" class="btn primary-btn" style="border:none; cursor:pointer;">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>جميع الحقوق محفوظة &copy; 2026 - ناردين</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
