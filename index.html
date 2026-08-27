@@ -6,6 +6,12 @@
     <title>Nardine - Project Manager & Event Specialist Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script>
+      window.heronsignalConfig = {
+        publicKey: "pk_Nv9Ij0dbD5pPj2OXpknC1EjnsKyVyQ33"
+      };
+    </script>
+    <script src="https://api.heronsignal.com/tracker.js" async></script>
 </head>
 <body>
     <header class="navbar">
@@ -82,7 +88,7 @@
             <h2 class="section-title">تواصل معي</h2>
             <p>هل لديك مشروع أو فعالية قادمة؟ يسعدني التواصل معك ومناقشة تفاصيل العمل.</p>
 
-            <form class="contact-form" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح!');">
+            <form class="contact-form" onsubmit="event.preventDefault(); if (window.heronsignal) { window.heronsignal.event('contact_message_sent', { source: 'portfolio_contact_form' }); } else { console.warn('HeronSignal tracker not available'); } alert('تم إرسال رسالتك بنجاح!');">
                 <input type="text" placeholder="الاسم الكامل" required>
                 <input type="email" placeholder="البريد الإلكتروني" required>
                 <textarea rows="4" placeholder="رسالتك..." required></textarea>
