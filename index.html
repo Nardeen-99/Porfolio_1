@@ -12,6 +12,26 @@
       };
     </script>
     <script src="https://api.heronsignal.com/tracker.js" async></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (!window.heronsignal) {
+          return;
+        }
+
+        window.heronsignal.event('portfolio_viewed', {
+          source: 'landing_page'
+        });
+
+        var contactLink = document.querySelector('a[href="#contact"]');
+        if (contactLink) {
+          contactLink.addEventListener('click', function () {
+            window.heronsignal.event('contact_section_opened', {
+              source: 'navbar'
+            });
+          });
+        }
+      });
+    </script>
 </head>
 <body>
     <header class="navbar">
@@ -88,7 +108,7 @@
             <h2 class="section-title">تواصل معي</h2>
             <p>هل لديك مشروع أو فعالية قادمة؟ يسعدني التواصل معك ومناقشة تفاصيل العمل.</p>
 
-            <form class="contact-form" onsubmit="event.preventDefault(); if (window.heronsignal) { window.heronsignal.event('contact_message_sent', { source: 'portfolio_contact_form' }); } else { console.warn('HeronSignal tracker not available'); } alert('تم إرسال رسالتك بنجاح!');">
+            <form class="contact-form" onsubmit="event.preventDefault(); if (window.heronsignal) { window.heronsignal.event('contact_form_submitted', { source: 'portfolio_contact_form' }); window.heronsignal.event('contact_message_sent', { source: 'portfolio_contact_form' }); } else { console.warn('HeronSignal tracker not available'); } alert('تم إرسال رسالتك بنجاح!');">
                 <input type="text" placeholder="الاسم الكامل" required>
                 <input type="email" placeholder="البريد الإلكتروني" required>
                 <textarea rows="4" placeholder="رسالتك..." required></textarea>
